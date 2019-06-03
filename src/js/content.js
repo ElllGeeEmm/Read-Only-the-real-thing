@@ -1,5 +1,3 @@
-import "../css/options.css";
-
 const wordArray = [
   'regret to inform',
   'thank you for your interest',
