@@ -1,9 +1,7 @@
 import { emailPattern, patterns } from './words'
-import axios from 'axios'
+import { fetchGif } from './fun'
 
-
-
-window.onload = function(){
+window.onload = function() {
   alert('fuck off')
 
   // Options for the observer (which mutations to observe)
@@ -18,9 +16,11 @@ window.onload = function(){
       if (mutation.type == 'childList') {
         emailTitles.forEach(title => {
           if (titleNode.innerText.includes(title)) {
+            fetchGif();
+
             console.log('new email opened');
             const body = document.body.innerText
-            patterns.forEach(pattern =>{
+            patterns.forEach(pattern => {
               if(!!body.match(pattern)) {
                 console.log("ha ha you got rejected");
               }
