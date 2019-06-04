@@ -10,9 +10,10 @@
 - sending an email -> we grab the email pattern from title
 
 ## step 3 done ✅
-- wbepack as we are working with npm package: https://www.npmjs.com/package/sendmail
+- wbepack for chrome extension https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate
 - check how it actually works with the chrome with the extension.
 - integrating API generator memes https://rapidapi.com/ronreiter/api/meme-generator?utm_source=mashape&utm_medium=301
+---> we ended up using giphy api stickers 
 
 ## step 4
 - stickers pop-up on emails once get rejected
