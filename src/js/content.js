@@ -21,12 +21,13 @@ window.onload = function() {
               //const popupDiv = document.createElement('div');
               const popupDiv = document.createElement('img');
               console.log(gif.data.data);
-              const url = gif.data.data.fixed_width_small_url;
+              const url = gif.data.data.image_url;
               console.log(url);
-              const formatted_url = url.split('//')[1]
               popupDiv.classList.add('gif');
               //popupDiv.style.backgroundImage = `url('https://cors-anywhere.herokuapp.com/${gif.data.data.embed_url}')`;
               popupDiv.src = url
+              popupDiv.style.top= Math.random(500) + 'px';
+              popupDiv.style.left= Math.random(500) + 'px';
               document.body.appendChild(popupDiv);
             });
             console.log('sup', gif);
