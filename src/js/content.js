@@ -26,7 +26,7 @@ window.onload = function() {
               popupDiv.classList.add('gif');
               //popupDiv.style.backgroundImage = `url('https://cors-anywhere.herokuapp.com/${gif.data.data.embed_url}')`;
               popupDiv.src = url
-              popupDiv.style.top= Math.ceil(Math.random(500) * 300) + 'px';
+              popupDiv.style.top= Math.ceil(Math.random(500) * 500) + 'px';
               popupDiv.style.left= Math.ceil(Math.random(500) * 400) + 'px';
               document.body.appendChild(popupDiv);
             });
