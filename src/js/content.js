@@ -13,6 +13,11 @@ window.onload = function() {
   const main = function(mutationsList, observer) {
     const titlesHTML = document.querySelectorAll('span.bqe')
     const emailTitles = new Set(Array.from(titlesHTML).map(title => title.innerText))
+    const divsToDelete = document.querySelectorAll('.gif')
+    divsToDelete.forEach((node) => {
+      node.parentNode.removeChild(node);
+    })
+    console.log(divsToDelete);
     for(let mutation of mutationsList) {
       if (mutation.type == 'childList') {
         emailTitles.forEach(title => {
@@ -22,19 +27,18 @@ window.onload = function() {
               if(!!body.match(pattern)) {
                 console.log("ha ha you got rejected");
                 const gif = fetchGif().then(gif => {
-                  //const popupDiv = document.createElement('div');
                   const popupDiv = document.createElement('img');
-                  console.log(gif.data.data[0].images.original.url);
-                  const url = gif.data.data[0].images.original.url === '' ? (
+                  const index = Math.floor(Math.random() * 24)
+                  const url = gif.data.data[index].images.original.url === '' ? (
                     'https://media.giphy.com/media/3ov9k0Ziq50EoOuWRi/giphy.gif'
                   ) : (
-                    gif.data.data[0].images.original.url
+                    gif.data.data[index].images.original.url
                   );
                   console.log(url);
                   popupDiv.classList.add('gif');
                   popupDiv.src = url
-                  popupDiv.style.top= Math.ceil(Math.random(500) * 500) + 'px';
-                  popupDiv.style.left= Math.ceil(Math.random(500) * 400) + 'px';
+                  popupDiv.style.bottom= Math.ceil(Math.random() * 650) + 'px';
+                  popupDiv.style.left= Math.ceil(Math.random() * 680) + 'px';
                   document.body.appendChild(popupDiv);
                 });
               }
