@@ -17,24 +17,26 @@ window.onload = function() {
       if (mutation.type == 'childList') {
         emailTitles.forEach(title => {
           if (titleNode.innerText.includes(title)) {
-            const gif = fetchGif().then(gif => {
-              //const popupDiv = document.createElement('div');
-              const popupDiv = document.createElement('img');
-              console.log(gif.data.data);
-              const url = gif.data.data.image_url;
-              console.log(url);
-              popupDiv.classList.add('gif');
-              //popupDiv.style.backgroundImage = `url('https://cors-anywhere.herokuapp.com/${gif.data.data.embed_url}')`;
-              popupDiv.src = url
-              popupDiv.style.top= Math.ceil(Math.random(500) * 500) + 'px';
-              popupDiv.style.left= Math.ceil(Math.random(500) * 400) + 'px';
-              document.body.appendChild(popupDiv);
-            });
-            console.log('sup', gif);
             const body = document.body.innerText
             patterns.forEach(pattern => {
               if(!!body.match(pattern)) {
                 console.log("ha ha you got rejected");
+                const gif = fetchGif().then(gif => {
+                  //const popupDiv = document.createElement('div');
+                  const popupDiv = document.createElement('img');
+                  console.log(gif.data.data[0].images.original.url);
+                  const url = gif.data.data[0].images.original.url === '' ? (
+                    'https://media.giphy.com/media/3ov9k0Ziq50EoOuWRi/giphy.gif'
+                  ) : (
+                    gif.data.data[0].images.original.url
+                  );
+                  console.log(url);
+                  popupDiv.classList.add('gif');
+                  popupDiv.src = url
+                  popupDiv.style.top= Math.ceil(Math.random(500) * 500) + 'px';
+                  popupDiv.style.left= Math.ceil(Math.random(500) * 400) + 'px';
+                  document.body.appendChild(popupDiv);
+                });
               }
             })
           }
