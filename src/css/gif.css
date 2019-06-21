@@ -1,7 +1,64 @@
+.textDiv {
+  z-index: 10;
+  position: absolute;
+  left: 10%;
+  top: 15%;
+  color: blue;
+  font-size: 120px;
+  font-family: 'Chivo', sans-serif;
+  animation-name: colorchange;
+  animation-duration: 30s;
+    }
+
+    @keyframes colorchange {
+      0% {
+        color: blue;
+      }
+
+      10% {
+        color: #8e44ad;
+      }
+
+      20% {
+        color: #1abc9c;
+      }
+
+      30% {
+        color: #d35400;
+      }
+
+      40% {
+        color: blue;
+      }
+
+      50% {
+        color: #34495e;
+      }
+
+      60% {
+        color: blue;
+      }
+
+      70% {
+        color: #2980b9;
+      }
+      80% {
+        color: #f1c40f;
+      }
+
+      90% {
+        color: #2980b9;
+      }
+
+      100% {
+        color: pink;
+      }
+    }
+
 
 .gif {
   position: absolute;
   height: 400px;
   width: 400px;
-  z-index: 999;
+  z-index: 9;
 }

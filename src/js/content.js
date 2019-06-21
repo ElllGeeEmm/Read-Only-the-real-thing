@@ -1,10 +1,8 @@
-import { emailPattern, patterns } from './words'
+import { emailPattern, patterns, encouragement } from './words'
 import { fetchGif } from './fun'
 import "../css/gif.css"
 
 window.onload = function() {
-  alert('fuck off')
-
   // Options for the observer (which mutations to observe)
   const config = { attributes: true, childList: true, subtree: true };
   const titleNode = document.querySelector('title');
@@ -13,11 +11,10 @@ window.onload = function() {
   const main = function(mutationsList, observer) {
     const titlesHTML = document.querySelectorAll('span.bqe')
     const emailTitles = new Set(Array.from(titlesHTML).map(title => title.innerText))
-    const divsToDelete = document.querySelectorAll('.gif')
+    const divsToDelete = document.querySelectorAll('.gif, .textDiv')
     divsToDelete.forEach((node) => {
       node.parentNode.removeChild(node);
     })
-    console.log(divsToDelete);
     for(let mutation of mutationsList) {
       if (mutation.type == 'childList') {
         emailTitles.forEach(title => {
@@ -26,7 +23,27 @@ window.onload = function() {
             patterns.forEach(pattern => {
               if(!!body.match(pattern)) {
                 console.log("ha ha you got rejected");
-                const gifs = fetchGif().then(gif => {createPopup(gif)});
+                if(!document.querySelector('.textDiv')){
+                  const textDiv = document.createElement('h1');
+                  textDiv.classList.add('textDiv');
+                  textDiv.innerText = encouragement[Math.floor(Math.random()*encouragement.length)];
+                  document.body.appendChild(textDiv);
+                }
+                const gif = fetchGif().then(gif => {
+                  const popupDiv = document.createElement('img');
+                  const index = Math.floor(Math.random() * 24)
+                  const url = gif.data.data[index].images.original.url === '' ? (
+                    'https://media.giphy.com/media/3ov9k0Ziq50EoOuWRi/giphy.gif'
+                  ) : (
+                    gif.data.data[index].images.original.url
+                  );
+                  console.log(url);
+                  popupDiv.classList.add('gif');
+                  popupDiv.src = url
+                  popupDiv.style.top= Math.ceil(Math.random() * 650) + 'px';
+                  popupDiv.style.left= Math.ceil(Math.random() * 680) + 'px';
+                  document.body.appendChild(popupDiv);
+                });
               }
             })
           }
@@ -43,19 +60,3 @@ window.onload = function() {
   // Start observing the target node for configured mutations
   observer.observe(titleNode, config);
 };
-
-const createPopup = gif => {
-  const popupDiv = document.createElement('img');
-  const index = Math.floor(Math.random() * 24)
-  const url = gif.data.data[index].images.original.url === '' ? (
-    'https://media.giphy.com/media/3ov9k0Ziq50EoOuWRi/giphy.gif'
-  ) : (
-    gif.data.data[index].images.original.url
-  );
-  console.log(url);
-  popupDiv.classList.add('gif');
-  popupDiv.src = url
-  popupDiv.style.bottom= Math.ceil(Math.random() * 650) + 'px';
-  popupDiv.style.left= Math.ceil(Math.random() * 680) + 'px';
-  document.body.appendChild(popupDiv);
-}

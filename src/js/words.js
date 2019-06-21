@@ -17,11 +17,30 @@ const wordArray = [
   'after carefully reviewing',
 ];
 
+const encouragement = [
+  'You are great',
+  'Keep going',
+  'Do not give up',
+  'You are awesome',
+  'Courage, dear heart',
+  'Embrace uncertainty',
+  'This is all part of the way',
+  'There is something in you that the world needs',
+  'You are way more than enough',
+  'You are doing an amazing job at life',
+  'You are gold, baby',
+  'You are amazing',
+  'You are brave',
+  'The best revenge is massive success',
+  'Never, never, never give up'
+]
+
 const emailPattern = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/
 
 const patterns = wordArray.map(word => new RegExp(word, 'gi'))
 
 export {
   emailPattern,
-  patterns
+  patterns,
+  encouragement
 }
