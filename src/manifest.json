@@ -1,5 +1,5 @@
 {
-  "name": "Chrome Extension Webpack",
+  "name": "Read Only",
   "options_page": "options.html",
   "background": {
     "page": "background.html"
