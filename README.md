@@ -5,7 +5,6 @@ This project's goal is to make a dread process to a happy one :)
 install plugin: 
 
 ![image1](https://i.imgur.com/MI8dsp7.png)
-![image2](https://i.imgur.com/qz7faNq.png)
 ![image3](https://i.imgur.com/xSf9PL6.png)
 ![image4](https://i.imgur.com/OyXyTtb.png)
 
@@ -25,4 +24,9 @@ for(let mutation of mutationsList) {
                 console.log("ha ha you got rejected");
   ```
 # Credits
-made by [shirin anlen](https://shirin.works/) and Robert Morrissey
+made by [shirin anlen](https://shirin.works/) and [Robert Morrissey](https://robertmorrissey.dev/)
+
+![image2](https://i.imgur.com/qz7faNq.png)
+
+<3
+
