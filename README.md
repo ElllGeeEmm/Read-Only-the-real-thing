@@ -2,7 +2,7 @@
 A chrome extension that reads emails in order to look for rejections patterns that comes from jobs, grants and projects applications and takes over the emails with happy gifs and encouragements expressions. 
 This project's goal is to make a dread process to a happy one :)
 
-[install plugin](https://chrome.google.com/webstore/detail/read-only/oojhhdobnhhjidcdbdjkfmfafdnddgij?hl=en-US&gl=US&authuser=1)
+-->> [visit Chrome store and install our extenstion for free](https://chrome.google.com/webstore/detail/read-only/oojhhdobnhhjidcdbdjkfmfafdnddgij?hl=en-US&gl=US&authuser=1) <<--
 
 ![image3](https://i.imgur.com/xSf9PL6.png)
 
