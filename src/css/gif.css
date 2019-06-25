@@ -1,18 +1,18 @@
 .textDiv {
   z-index: 10;
   position: absolute;
-  left: 10%;
-  top: 15%;
-  color: blue;
+  left: 4%;
+  top: 10%;
+  color: #4A01FF;
   font-size: 120px;
-  font-family: 'Chivo', sans-serif;
+  text-shadow: 2px 2px 5px #DAFFCE, 0 0 9px #FF70EC;
   animation-name: colorchange;
-  animation-duration: 30s;
+  animation-duration: 40s;
     }
 
     @keyframes colorchange {
       0% {
-        color: blue;
+        color: #4A01FF;
       }
 
       10% {
@@ -54,7 +54,6 @@
         color: pink;
       }
     }
-
 
 .gif {
   position: absolute;

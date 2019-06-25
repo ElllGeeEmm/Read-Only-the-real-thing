@@ -15,6 +15,17 @@ const wordArray = [
   'We appreciate that you took the time to apply for the position',
   'We appreciate that you are interested in our company',
   'after carefully reviewing',
+  'I will certainly keep you in mind for future work',
+  'your application did not get accepted',
+  'we hope that you may consider applying again in the future',
+  'your project did not make it to the final round',
+  'Unfortunately, I couldn’t fund your application',
+  'Unfortunately, your application was not choosen',
+  'we had to make many painful decisions',
+  'We wish you success in your efforts',
+  'Unfortunately, I am writing with the news that yours is not among the applications selected this round',
+  'Thank you for allowing us to consider your project for this year',
+  'We regret to inform you that we are unable to include'
 ];
 
 const encouragement = [
