@@ -5,6 +5,7 @@ This project's goal is to make a dread process to a happy one :)
 install plugin: 
 
 ![image3](https://i.imgur.com/xSf9PL6.png)
+![image1](https://i.imgur.com/BtBxgva.mp4)
 
 # Technology 
 JavaScript, Chrome Extension, ReGex, WebPack, Giphy API.
