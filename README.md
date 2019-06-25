@@ -4,9 +4,7 @@ This project's goal is to make a dread process to a happy one :)
 
 install plugin: 
 
-![image1](https://i.imgur.com/MI8dsp7.png)
 ![image3](https://i.imgur.com/xSf9PL6.png)
-![image4](https://i.imgur.com/OyXyTtb.png)
 
 # Technology 
 JavaScript, Chrome Extension, ReGex, WebPack, Giphy API.
@@ -26,7 +24,7 @@ for(let mutation of mutationsList) {
 # Credits
 made by [shirin anlen](https://shirin.works/) and [Robert Morrissey](https://robertmorrissey.dev/)
 
-![image2](https://i.imgur.com/qz7faNq.png)
+![image4](https://i.imgur.com/OyXyTtb.png)
 
 <3
 
