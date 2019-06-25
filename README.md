@@ -1,5 +1,7 @@
 ## Read Only 
-a chrome extension that reads emails in order to look for rejections patterns that comes from jobs, grants and projects applications and takes over the emails with happy gifs and encouragements expressions. 
+A chrome extension that reads emails in order to look for rejections patterns that comes from jobs, grants and projects applications and takes over the emails with happy gifs and encouragements expressions. 
+This project's goal is to make a dread process to a happy one :)
+
 install plugin: 
 
 ![image1](https://i.imgur.com/MI8dsp7.png)
@@ -8,7 +10,7 @@ install plugin:
 ![image4](https://i.imgur.com/OyXyTtb.png)
 
 # Technology 
-JavaScript, ReGex, WebPack, Giphy API.
+JavaScript, Chrome Extension, ReGex, WebPack, Giphy API.
 
 # Code Snippet
 the entire code is based on DOM manipulation - we are not storing, keeping or looking for any personal data, just tracking windows activities inside the Gmail inbox within unread emails, and then matching text patterns using ReGex.
@@ -22,3 +24,5 @@ for(let mutation of mutationsList) {
               if(!!body.match(pattern)) {
                 console.log("ha ha you got rejected");
   ```
+# Credits
+made by [shirin anlen](https://shirin.works/) and Robert Morrissey
